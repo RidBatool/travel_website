@@ -1,0 +1,575 @@
+.container-fluid{
+    margin-left:80px;
+    margin-right:100px;
+}
+.navbar-brand{
+    font-size:30px;
+    font-weight:bold;
+}
+.navbar-brand b {
+    font-size: 35px;
+    color: yellow;
+    text-shadow: 0px 0px 5px black; /* x-offset y-offset blur color */
+}
+.nav-link {
+    font-size:15px;
+    font-weight:bold;
+    color:black;
+    border-radius:10px;
+    width:90px;
+}
+.nav-link:hover{
+    background-color:#fd7e14;;
+
+}
+.btn{
+    background-color:#fd7e14;
+    color:white;
+}
+.btn:hover{
+    background-color: #fd7e14 !important;
+    color:white !important;
+}.welcome-div {
+    background-image: url("https://shahbaz-travel-app.netlify.app/image/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 85vh;
+
+    /* Center text responsively */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Responsive font sizes with clamp() */
+.heading {
+    font-size: clamp(20px, 3vw, 35px);
+    font-weight: 700;
+    color: white;
+}
+
+.animat {
+    font-size: clamp(30px, 6vw, 60px);
+    font-weight: 700;
+    color: white;
+}
+
+.animat b {
+    font-size: inherit; /* keep same as parent */
+    font-weight: 700;
+    color: #fd7e14;
+    text-shadow: 0px 0px 5px black;
+}
+
+.para {
+    font-size: clamp(14px, 2vw, 18px);
+    color: white;
+    max-width: 600px; /* keeps text from stretching too wide */
+}
+
+.butt {
+    font-size: 18px;
+}
+
+.butt button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: clamp(14px, 2vw, 18px);
+    background-color: #fd7e14;
+    color: white;
+    border: none;
+}
+
+/* Extra responsiveness with breakpoints */
+@media (max-width: 768px) {
+    .para {
+        padding: 0 20px; /* spacing on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .animat {
+        font-size: 32px;
+    }
+    .heading {
+        font-size: 20px;
+    }
+}
+
+.main-book{
+    padding:0;
+    margin:0;
+    margin-top:0;
+    background-color:rgb(236, 234, 234);
+}
+.book-container {
+  /* ❌ remove fixed height */
+  /* height:30vw; */
+  
+  width: 100%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  justify-content: space-between;
+ 
+  padding: 20px; /* give breathing space */
+}
+
+
+.book{
+    margin-left: 48vw;
+    /* margin-top:4vw; */
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;   /* allows content to go down on small screens */
+}
+.col1, .col2 {
+  flex: 1;  /* makes both columns share space equally */
+  min-width: 300px;  /* prevents input boxes from getting too small */
+}
+
+
+.col1 img {
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);   /* Start off-screen (left) */
+  opacity: 0;
+  animation: slideFromLeft 1.5s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);   /* Final natural position */
+    opacity: 1;
+  }
+}
+
+.col2{
+    margin-left:1vw;
+    margin-bottom: 30px;
+}
+.col2 input{
+    width:100%;
+    height:3vw;
+    font-size:clamp(14px, 2vw, 18px);
+    border-radius:5px;
+    color:black;
+    box-shadow: 0px 0px 5px gray ;
+    border:none;
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;  /* stack col1 and col2 vertically */
+    align-items: center;
+  }
+
+  .col1 img {
+    width: 80%;   /* smaller image for mobile */
+    height: auto;
+  }
+
+  .col2 {
+    width: 90%;   /* input boxes fit nicely */
+    margin: 20px 0;
+  }
+
+  .col2 input {
+    height: 40px;   /* bigger tap area for mobile */
+    font-size: 16px;
+  }
+}
+
+.row button{
+    width:10vw;
+    height:3vw;
+    background-color:#fd7e14;
+    color:white;
+    border:none;
+    border-radius:5px;
+    margin-left:50%;
+    
+}
+@media (max-width:768px){
+
+    .row button{
+        margin-left:15%;
+        font-size: clamp(14px, 2vw, 18px);
+        width:20vw;
+        height:20vw;
+    }
+    
+}
+
+.main-pack{
+    background-color:black;
+    margin:0;
+    padding:0;
+}
+.Pack{
+    margin-top:3vw;
+    margin-left:48vw;
+}
+.col-pack{
+    width:25vw;
+    height:33vw;
+   
+
+
+}
+.row-pack{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.col1-pack{
+    border:none;
+    box-shadow:0px 0px 5px gray;
+    border-radius:25px;
+}
+.col2-pack{
+    border:none;
+    box-shadow:0px 0px 5px gray;
+    border-radius:25px;
+}
+.col3-pack{
+    border:none;
+    box-shadow:0px 0px 5px gray;
+    border-radius:15px;
+}
+.pack-img{
+    width:25vw;
+    height:15vw;
+    background-image:url("	https://shahbaz-travel-app.netlify.app/image/United-Kingdom.jpg");
+    background-size: cover;
+    border-radius:15px 15px 0 0;
+}
+.pack-text button{
+    width:10vw;
+    height:3vw;
+    background-color:#fd7e14;
+    color:white;
+    border:none;
+    border-radius:5px;
+    margin-left:10%;
+}
+.pack-text{
+    margin-left:5px;
+}
+.pack-text h3{
+    color:black;
+}
+.pack-text h4{
+    color:black;
+}
+.pack-text p{
+    color:black;
+}
+
+.pack-img2{
+    width:25vw;
+    height:15vw;
+    background-image:url("https://shahbaz-travel-app.netlify.app/image/australia.jpg");
+    background-size: cover;
+    border-radius:15px 15px 0 0;
+}
+.pack-img3{
+    width:25vw;
+    height:15vw;
+    background-image:url("https://shahbaz-travel-app.netlify.app/image/pakistan.jpg");
+    background-size: cover;
+    border-radius:15px 15px 0 0;
+}
+.rating {
+  font-size: 24px;
+  color: gold;
+}
+.pack-img4{
+    width:25vw;
+    height:15vw;
+    background-image:url("https://shahbaz-travel-app.netlify.app/image/france.jpg");
+    background-size: cover;
+    border-radius:15px 15px 0 0;
+}
+.pack-img5{
+    width:25vw;
+    height:15vw;
+    background-image:url(":	https://shahbaz-travel-app.netlify.app/image/italy.avif");
+    background-size: cover;
+    border-radius:15px 15px 0 0;
+}
+.pack-img6{
+    width:25vw;
+    height:15vw;
+    background-image:url("https://shahbaz-travel-app.netlify.app/image/newzealan.jpg");
+    background-size: cover;
+    border-radius:15px 15px 0 0;
+}
+
+
+/* 📱 For tablets and smaller screens */
+@media (max-width: 992px) {
+  .row-pack {
+    justify-content: center;
+    gap: 20px; /* spacing between cards */
+  }
+
+  .col-pack {
+    width: 45%;   /* two cards per row */
+    height: auto; /* allow height to adjust */
+  }
+
+  .pack-img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .pack-text button {
+    width: 40%;
+    height: auto;
+  }
+}
+
+/* 📱 For mobile screens */
+@media (max-width: 576px) {
+  .col-pack {
+    width: 100%;   /* full width per card */
+    margin-bottom: 20px;
+  }
+
+  .pack-img {
+    height: 180px; /* smaller image */
+  }
+
+  .pack-text button {
+    width: 60%;
+    height: auto;
+  }
+
+  .Pack {
+    margin-left: 0; 
+    text-align: center; /* center heading */
+  }
+}
+
+.row-main{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.main-services {
+  padding: 50px 20px;
+  background-color: #f8f8f8; /* light background */
+}
+
+.row-main {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.col-main {
+  flex: 1 1 30%; /* 3 per row */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.col-main:hover {
+  transform: translateY(-5px); /* slight hover effect */
+}
+
+.col-main i {
+  font-size: 70px;
+  color: #fd7e14; /* orange */
+  margin-bottom: 15px;
+}
+
+/* .col-main h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px; */
+/* } */
+
+.col-main p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.row-gal{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+
+}
+.col-gal{
+    width:25vw;
+    height:18vw;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius:10px;
+}
+
+.col-gal1{
+    background-image:url("	https://shahbaz-travel-app.netlify.app/image/g1.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius:10px;
+}
+.col-gal2{
+    background-image:url("	https://shahbaz-travel-app.netlify.app/image/g2.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius:10px;
+}
+.col-gal3{
+    background-image:url("https://shahbaz-travel-app.netlify.app/image/g3.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius:10px;
+}
+
+.main-about {
+  margin-top: 8%;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
+
+.row-about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* vertically align image & text */
+  justify-content: center;
+  gap: 30px;
+}
+
+.col-about {
+  flex: 1 1 45%; /* take about half width each */
+  min-height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.col-about1 {
+  background-image: url("https://shahbaz-travel-app.netlify.app/image/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.col-about2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.col-about2 h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.col-about2 p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.col-about2 button {
+  padding: 10px 20px;
+  background-color: #fd7e14; /* orange */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: fit-content;
+}
+
+.col-about2 button:hover {
+  background-color: #e56700;
+}
+
+/* 📱 Responsive */
+@media (max-width: 992px) {
+  .col-about {
+    flex: 1 1 100%; /* stack image and text */
+    min-height: 250px;
+  }
+  .col-about2 {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+
+.End {
+  background: #f8f8f8;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.row-end {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row-end p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.row-end h6 {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #666;
+}
+
+.row-end a {
+  text-decoration: none;
+  color: #fd7e14; /* orange */
+  font-weight: bold;
+}
+
+.icon-end {
+  margin: 20px 0;
+}
+
+.icon-end i {
+  font-size: 22px;
+  margin: 0 10px;
+  font-weight: bold; /* makes icons appear thicker */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon-end i:hover {
+  color: #fd7e14; /* orange hover */
+}
